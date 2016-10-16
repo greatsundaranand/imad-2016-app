@@ -24,11 +24,12 @@ var firsthtml = {
 function createmyhtml (mydata) {
     var htmlstring = `<html>
         <head>
-        <title> mydata.title </title>
+        <title> ${mydata.title} </title>
         </head>
         <body>
-        mydata.heading
-        mydata.content
+        <h1>${mydata.heading}</h1>
+        <hr>
+        ${mydata.content}
         </body>
         </html>`;
         return htmlstring;
