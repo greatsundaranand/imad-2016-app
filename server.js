@@ -72,15 +72,15 @@ app.get('/', function (req, res) {
 });
 
 app.get('/sundar', function (req, res) {
-  res.send(createmyhtml(firsthtml));
+  res.send(createmyhtml(allhtml.firsthtml));
 });
 
 app.get('/sanjai', function (req, res) {
-  res.send(createmyhtml(secondhtml));
+  res.send(createmyhtml(allhtml.secondhtml));
 });
 
 app.get('/dummy', function (req, res) {
-  res.send(createmyhtml(thirdhtml));
+  res.send(createmyhtml(allhtml.thirdhtml));
 });
 
 app.get('/ui/style.css', function (req, res) {
