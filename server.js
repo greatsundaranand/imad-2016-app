@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 var allhtml = {
-    sundar : {
+    'sundar' : {
     title: 'This is Sundar',
     heading: 'Sundar Speaking',
     content: `<p>
@@ -21,7 +21,7 @@ var allhtml = {
       This is all my first page and I am doing it in IMAD. I am doing my first year Engineering on Electronics & Computer Engineering. You must be wondering what is Electronics & Computer as normally people go with Electronics & Communication. This is a new innovative course that was designed based on Industry latest demands and hence this is predicted to be a best one in future
     </p>`
     },
-    sanjai : {
+    'sanjai' : {
     title: 'This is Sanjai',
     heading: 'Sanjai Speaking',
     content: `<p>
@@ -36,7 +36,7 @@ var allhtml = {
       This is all my first page and I am doing it in IMAD. I am doing my first year Engineering on Electronics & Computer Engineering. You must be wondering what is Electronics & Computer as normally people go with Electronics & Communication. This is a new innovative course that was designed based on Industry latest demands and hence this is predicted to be a best one in future
     </p>`
     },
-    mummy : {
+    'mummy' : {
     title: 'This is Mummy',
     heading: 'Mummy Speaking',
     content: `<p>
