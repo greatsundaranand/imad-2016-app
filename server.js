@@ -57,6 +57,7 @@ function createmyhtml (mydata) {
     var htmlstring = `<html>
         <head>
         <title> ${mydata.title} </title>
+          <link href="/ui/style.css" rel="stylesheet" />
         </head>
         <body>
         <h1>${mydata.heading}</h1>
@@ -73,14 +74,6 @@ app.get('/', function (req, res) {
 
 app.get('/:name', function (req, res) {
   res.send(createmyhtml(allhtml[req.params.name]));
-});
-
-app.get('/sanjai', function (req, res) {
-  res.send(createmyhtml(allhtml.secondhtml));
-});
-
-app.get('/dummy', function (req, res) {
-  res.send(createmyhtml(allhtml.thirdhtml));
 });
 
 app.get('/ui/style.css', function (req, res) {
