@@ -74,7 +74,11 @@ app.get('/', function (req, res) {
 });
 
 app.get('/:name', function (req, res) {
-  res.send(createmyhtml(allhtml[req.params.name]));
+    if (req.params.name == 'sanjai' || req.params.name == 'sundar' || req.params.name == 'mummy') {
+        res.send(createmyhtml(allhtml[req.params.name]));
+    } else {
+        res.send('<html><head><title>Error</title></head><body><h1>Sorry - You have not given the right input!</h1></body></html>');
+    }
 });
 
 app.get('/ui/style.css', function (req, res) {
