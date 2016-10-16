@@ -5,12 +5,41 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var firsthtml = {
+    title: 'This is Sundar',
+    heading: 'Sundar Speaking',
+    content: `<p>
+      This is all my first page and I am doing it in IMAD. I am doing my first year Engineering on Electronics & Computer Engineering. You must be wondering what is Electronics & Computer as normally people go with Electronics & Communication. This is a new innovative course that was designed based on Industry latest demands and hence this is predicted to be a best one in future
+    </p>
+
+    <p class="mys">
+      This is all my first page and I am doing it in IMAD. I am doing my first year Engineering on Electronics & Computer Engineering. You must be wondering what is Electronics & Computer as normally people go with Electronics & Communication. This is a new innovative course that was designed based on Industry latest demands and hence this is predicted to be a best one in future
+    </p>
+   
+    <p>
+      This is all my first page and I am doing it in IMAD. I am doing my first year Engineering on Electronics & Computer Engineering. You must be wondering what is Electronics & Computer as normally people go with Electronics & Communication. This is a new innovative course that was designed based on Industry latest demands and hence this is predicted to be a best one in future
+    </p>`
+};
+
+function createmyhtml (mydata) {
+    var htmlstring = `<html>
+        <head>
+        <title> mydata.title </title>
+        </head>
+        <body>
+        mydata.heading
+        mydata.content
+        </body>
+        </html>`;
+        return htmlstring;
+}
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
 app.get('/sundar', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'sundar.html'));
+  res.send(createmyhtml(firsthtml));
 });
 
 app.get('/sanjai', function (req, res) {
