@@ -5,7 +5,8 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var firsthtml = {
+var allhtml = {
+    firsthtml : {
     title: 'This is Sundar',
     heading: 'Sundar Speaking',
     content: `<p>
@@ -19,6 +20,37 @@ var firsthtml = {
     <p>
       This is all my first page and I am doing it in IMAD. I am doing my first year Engineering on Electronics & Computer Engineering. You must be wondering what is Electronics & Computer as normally people go with Electronics & Communication. This is a new innovative course that was designed based on Industry latest demands and hence this is predicted to be a best one in future
     </p>`
+    },
+    secondhtml : {
+    title: 'This is Sanjai',
+    heading: 'Sanjai Speaking',
+    content: `<p>
+      This is all my first page and I am doing it in IMAD. I am doing my first year Engineering on Electronics & Computer Engineering. You must be wondering what is Electronics & Computer as normally people go with Electronics & Communication. This is a new innovative course that was designed based on Industry latest demands and hence this is predicted to be a best one in future
+    </p>
+
+    <p class="mys">
+      This is all my first page and I am doing it in IMAD. I am doing my first year Engineering on Electronics & Computer Engineering. You must be wondering what is Electronics & Computer as normally people go with Electronics & Communication. This is a new innovative course that was designed based on Industry latest demands and hence this is predicted to be a best one in future
+    </p>
+   
+    <p>
+      This is all my first page and I am doing it in IMAD. I am doing my first year Engineering on Electronics & Computer Engineering. You must be wondering what is Electronics & Computer as normally people go with Electronics & Communication. This is a new innovative course that was designed based on Industry latest demands and hence this is predicted to be a best one in future
+    </p>`
+    },
+    thirdhtml : {
+    title: 'This is Mummy',
+    heading: 'Mummy Speaking',
+    content: `<p>
+      This is all my first page and I am doing it in IMAD. I am doing my first year Engineering on Electronics & Computer Engineering. You must be wondering what is Electronics & Computer as normally people go with Electronics & Communication. This is a new innovative course that was designed based on Industry latest demands and hence this is predicted to be a best one in future
+    </p>
+
+    <p class="mys">
+      This is all my first page and I am doing it in IMAD. I am doing my first year Engineering on Electronics & Computer Engineering. You must be wondering what is Electronics & Computer as normally people go with Electronics & Communication. This is a new innovative course that was designed based on Industry latest demands and hence this is predicted to be a best one in future
+    </p>
+   
+    <p>
+      This is all my first page and I am doing it in IMAD. I am doing my first year Engineering on Electronics & Computer Engineering. You must be wondering what is Electronics & Computer as normally people go with Electronics & Communication. This is a new innovative course that was designed based on Industry latest demands and hence this is predicted to be a best one in future
+    </p>`
+    }
 };
 
 function createmyhtml (mydata) {
@@ -44,11 +76,11 @@ app.get('/sundar', function (req, res) {
 });
 
 app.get('/sanjai', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'sanjai.html'));
+  res.send(createmyhtml(secondhtml));
 });
 
 app.get('/dummy', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'mummy.html'));
+  res.send(createmyhtml(thirdhtml));
 });
 
 app.get('/ui/style.css', function (req, res) {
