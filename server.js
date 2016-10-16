@@ -57,7 +57,8 @@ function createmyhtml (mydata) {
     var htmlstring = `<html>
         <head>
         <title> ${mydata.title} </title>
-          <link href="/ui/style.css" rel="stylesheet" />
+         <link href="/ui/style.css" rel="stylesheet" />
+         <meta name="viewport" content="width=device.width, initial-scale=1" />
         </head>
         <body>
         <h1>${mydata.heading}</h1>
