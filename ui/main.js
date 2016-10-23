@@ -8,7 +8,7 @@ function fn1() {
 
 function fn2() {
     var myimage=document.getElementById("myimage");
-    mymargin=mymargin+400;
+    mymargin=mymargin+100;
     console.log(mymargin);
-    myimage.style.marginleft=mymargin+"px";
+    myimage.style.marginLeft=mymargin+"px";
 }
