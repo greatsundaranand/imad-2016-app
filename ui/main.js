@@ -1,5 +1,6 @@
 console.log('Loaded!');
 
 function fn1() {
-    alert("You clicked me");
+    var mydiv=document.getElementbyId("tantan");
+    mydiv.innerHTML="Thanks for clicking me";
 }
