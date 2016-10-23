@@ -77,6 +77,10 @@ app.get('/my.JPG', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
+app.get('/main.js', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'main.js'));
+});
+
 app.get('/:name', function (req, res) {
     if (req.params.name == 'sanjai' || req.params.name == 'sundar' || req.params.name == 'mummy') {
         res.send(createmyhtml(allhtml[req.params.name]));
