@@ -32,9 +32,7 @@ function on_load() {
 function plus() {
     var var1 = parseInt(document.getElementById("1").value);
     var var2 = parseInt(document.getElementById("2").value);
-    var var3 = var1 + var2;
-    var answer=document.getElementById("tantan");
-    answer.innerHTML = var3;
+
     
     var request = new XMLHttpRequest();
     
