@@ -76,11 +76,14 @@ app.get('/visitor', function (req,res) {
     res.send("You are visitor #"+visitorno);
 })
 
+var answerlist = [];
+
 app.get('/add', function (req,res) {
     var var1=req.query.var1;
     var var2=req.query.var2;
     var var3=parseInt(var1)+parseInt(var2);
-    res.send(var1 + " added to "+var2 + "="+ var3);
+    answerlist.push(var1 + " added to "+var2 + "="+ var3);
+    res.send(JSON.stringify(answerlist));
 })
 
 app.get('/', function (req, res) {
