@@ -69,6 +69,13 @@ function createmyhtml (mydata) {
         return htmlstring;
 }
 
+var visitorno=0
+
+app.get('/visitor', function (req,res) {
+    visitorno=visitorno+1;
+    res.send("You are visitor #"+visitorno);
+})
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
