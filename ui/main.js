@@ -35,4 +35,20 @@ function plus() {
     var var3 = var1 + var2;
     var answer=document.getElementById("tantan");
     answer.innerHTML = var3;
+    
+    var request = new XMLHttpRequest();
+    
+    
+    request.onreadystatechange = function () {
+        if (request.readyState === XMLHttpRequest.DONE) {
+            if (request.status === 200) {
+                var answer=document.getElementById("tantan");
+                answer.innerHTML = request.responseText;
+            }
+        }
+    }
+    
+    request.open('GET','http://greatsundaranand.imad.hasura-app.io/add?var1='+var1+'&var2='+var2, true);
+    console.log('http://greatsundaranand.imad.hasura-app.io/add?var1='+var1+'&var2='+var2);
+    request.send(null);
 }
