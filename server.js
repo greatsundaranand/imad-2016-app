@@ -76,6 +76,11 @@ app.get('/visitor', function (req,res) {
     res.send("You are visitor #"+visitorno);
 })
 
+app.get('/add', function (req,res) {
+    visitorno=visitorno+1;
+    res.send("You are visitor #"+visitorno);
+})
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
