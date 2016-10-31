@@ -17,10 +17,8 @@ function on_load() {
     
     
     request.onreadystatechange = function () {
-        console.log(request.readyState);
         if (request.readyState === XMLHttpRequest.DONE) {
             if (request.status === 200) {
-                consolde.log(request.responseText);
                 var answer=document.getElementById("visitor");
                 answer.innerHTML = request.responseText;
             }
