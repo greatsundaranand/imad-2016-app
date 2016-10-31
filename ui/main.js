@@ -11,3 +11,21 @@ function fn2() {
     mymargin=mymargin+5;
     myimage.style.marginLeft=mymargin+"px";
 }
+
+function on_load() {
+    var request = new XMLHttpRequest();
+    
+    
+    request.onreadystatechange = function () {
+        console.log(request.readyState);
+        if (request.readyState === XMLHttpRequest.DONE) {
+            if (request.status === 200) {
+                var answer=document.getElementById("tantan");
+                answer.innerHTML = request.responseText;
+            }
+        }
+    }
+    
+    request.open('GET','www.apple.co.in', true);
+    
+}
