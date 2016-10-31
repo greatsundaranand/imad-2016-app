@@ -74,7 +74,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/my.JPG', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
+  res.sendFile(path.join(__dirname, 'ui', 'Sundar.jpg'));
 });
 
 app.get('/ui/main.js', function (req, res) {
