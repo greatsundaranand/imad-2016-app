@@ -30,9 +30,9 @@ function on_load() {
 }
 
 function plus() {
-    var var1 = parseInt(document.getElementById("1"));
-    var var2 = parseInt(document.getElementById("2"));
-    var var3 = var1.value + var2.value;
+    var var1 = parseInt(document.getElementById("1").value);
+    var var2 = parseInt(document.getElementById("2").value);
+    var var3 = var1 + var2;
     var answer=document.getElementById("tantan");
     answer.innerHTML = var3;
 }
