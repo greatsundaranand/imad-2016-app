@@ -35,14 +35,21 @@ function plus() {
 
     
     var request = new XMLHttpRequest();
+    var resultlist = [];
+    var display = "<ol>";
     
     
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
             if (request.status === 200) {
-                var answer=document.getElementById("tantan");
-                answer.innerHTML = request.responseText;
+                resultlist = JSON.parse(request.responseText);
+                for (var i=0; i<resultlist.length;i++) {
+                    display = display + "<li>" + resultlist[i] + "</li>"
+                }
+                display = display + "</ol>"
             }
+            var answer=document.getElementById("tantan");
+            answer.innerHTML = display;
         }
     }
     
