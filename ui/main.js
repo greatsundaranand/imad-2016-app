@@ -20,6 +20,7 @@ function on_load() {
         console.log(request.readyState);
         if (request.readyState === XMLHttpRequest.DONE) {
             if (request.status === 200) {
+                consolde.log(request.responseText);
                 var answer=document.getElementById("tantan");
                 answer.innerHTML = request.responseText;
             }
