@@ -21,12 +21,12 @@ function on_load() {
         if (request.readyState === XMLHttpRequest.DONE) {
             if (request.status === 200) {
                 consolde.log(request.responseText);
-                var answer=document.getElementById("tantan");
+                var answer=document.getElementById("visitor");
                 answer.innerHTML = request.responseText;
             }
         }
     }
     
-    request.open('GET','www.apple.co.in', true);
-    
+    request.open('GET','http://greatsundaranand.imad.hasura-app.io/visitor', true);
+    request.send(null);
 }
