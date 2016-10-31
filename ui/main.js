@@ -28,3 +28,11 @@ function on_load() {
     request.open('GET','http://greatsundaranand.imad.hasura-app.io/visitor', true);
     request.send(null);
 }
+
+function plus() {
+    var var1 = document.getElementById("1");
+    var var2 = document.getElementById("2");
+    var var3 = var1.value + var2.value;
+    var answer=document.getElementById("tantan");
+    answer.innerHTML = var3;
+}
