@@ -79,7 +79,7 @@ app.get('/visitor', function (req,res) {
 app.get('/add', function (req,res) {
     var var1=req.query.var1;
     var var2=req.query.var2;
-    res.send(var1 + "added to "+var2 + "="+ var1+var2);
+    res.send(var1 + " added to "+var2 + "="+ parseInt(var1)+parseInt(var2));
 })
 
 app.get('/', function (req, res) {
